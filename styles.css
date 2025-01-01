@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color-darkblue: #020312;
+    --color-deepslate: #1D2A32;
+    --color-lightgray: #F0F0F0;
+    --color-lightgrayblue: #A3A7B0;
+    --color-coral: #FF6F61;
+    --color-softlavender: #D1B0D5;
+    --color-silver: #B5B5B5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family:"Poppins", serif; 
+    background-color: var(--color-darkblue);
+    color: white;
+}
+.section-padding{
+    padding: 4rem 6rem;
+}
+section{
+    scroll-margin-top: 40px;
+}
+
+/* ---------- Navbar ----------  */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 70px;
+    background-color: var(--color-deepslate);
+}
+.nav-logo p{
+    font-size: 3rem;
+    cursor: default;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+}
+.nav-links li{
+    list-style: none;
+    margin: 0 20px;
+}
+.nav-links a{
+    color: var(--color-lightgray);
+    text-decoration: none;
+}
+.nav-links a:hover{
+    color: var(--color-lightgrayblue);
+}
+
+/* -----  Navbar SmallScreens ----- */
+.nav-smallscreen{
+    display: none;
+}
+.nav-smallscreen i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav-smallscreen-links{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    background-color: var(--color-lightgrayblue);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    overflow: hidden;
+
+    font-size: 1.7rem;
+}
+.nav-smallscreen-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ---------- Home Section ---------- */
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90vh;
+}
+.home-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    flex:1;
+}
+.home-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+.home-img img{
+    width: 80%;
+}
+.home-h1{
+    font-size: 70px;
+    font-weight: normal;
+    line-height: 1.6;
+    word-break: break-word;
+}
+.home-h1 span{
+    color: var(--color-coral);
+}
+.home-buttons{
+    margin-top: 2rem;
+}
+.resume-btn{
+    color: white;
+    background-color: var(--color-coral);
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease-in-out;
+}
+.resume-btn:hover{
+    color: var(--color-darkblue);
+    background-color: var(--color-lightgray)
+}
+
+/* ---------- Skills Section ---------- */
+#skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3.5rem ;
+
+}
+.skills-container p{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align:justify;
+}
+.skills-left, .skills-right{
+    width: 40%;
+}
+.skills-right h4{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.skills-progress {
+    background-color: transparent;
+    height: 3rem;
+    margin-bottom: 2rem;
+
+    position: relative;
+}
+.skills-progress > figure{
+    position: absolute;
+    top: 0;
+}
+.skills-progress > figure::after{
+    content: "";
+    position: absolute;
+}
+.skills-progress .progress-title{
+    margin-bottom: 0.5rem;
+}
+.skills-progress .progress-bar{
+    background-color: var(--color-coral);
+    height: 0.1rem;
+
+    position: absolute;
+}
+
+/* ---------- Projects Section ---------- */
+#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#projects > h1, #skills > h1, #contact > h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.projects-container{
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.project-div{
+    flex: 1;
+    width: 100%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-softlavender);
+    border-radius: 20px;
+    min-width: 360px;
+}
+.project-title{
+    font-weight: normal;
+    text-align: center;
+    margin: 25px 0;
+}
+.project-image{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+.project-image:hover{
+    transform: scale(1.04);
+}
+.project-image img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.project-descriptions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.project-descriptions h3{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.project-descriptions > h3 span{
+    font-weight: normal;
+    color: var(--color-coral)
+}
+.projects-buttons{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-btn{
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: var(--color-darkblue);
+    margin: 0 1.5rem;
+    transition:color 0.3s ease-in-out,
+               background-color 0.3s ease-in-out ;
+}
+.project-btn:hover{
+    cursor: pointer;
+    background-color: var(--color-coral);
+    color: white;
+}
+
+/* ---------- Contact Section ---------- */
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container{
+    margin: 2rem 0;
+}
+.contact-container input{
+    width: 500px;
+    font-size: 1.2rem;
+    background-color: var(--color-coral);
+    color: var(--color-darkblue);
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+.contact-container input:hover, .contact-container input:focus{
+    outline: none;
+    cursor: default;
+}
