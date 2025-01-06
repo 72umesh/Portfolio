@@ -1,6 +1,18 @@
 
 
 // Projects 
+// Project 0
+document.getElementById("project0-github").onclick = function(){
+    location.href="https://github.com/72umesh/MovieList/";
+}
+document.getElementById("project0-demo").onclick = function(){
+    location.href="https://72umesh.github.io/MovieList/";
+}
+document.getElementById("project-img0").onclick = function(){
+    location.href="https://72umesh.github.io/MovieList/";
+}
+
+
 // Project 1 
 document.getElementById("project1-github").onclick = function(){
     location.href="https://github.com/72umesh/Maharaja-Restaurant";
